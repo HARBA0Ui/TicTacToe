@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 60%;
+    margin: 0 auto;
+    font-family: "poppins",sans-serif;
+
+}
+
+.title{
+    background: #cef834;
+    color: black;
+    padding: 1rem 2rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+span{
+    color: tomato;
+    font-size: 1.3em;
+    margin-right: .3rem;
+}
+
+.game{
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    place-items: center;
+}
+
+.square{
+    background: #cef834;
+    width: 90%;
+    height: 25vh;
+    text-align: center;
+    transition: .4s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150px;
+}
+
+.square:hover{
+    background: black;
+    color: white;
+}
+
+@media (max-width : 1200px){
+    .container{
+        width: 70%;
+    }
+}
+
+@media (max-width : 900px){
+    .container{
+        width: 90%;
+    }
+}
+
+
+@media (max-width : 600px){
+    body{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .container{
+        width: 100%;
+    }
+    .game{
+        gap: 1rem .5rem;
+    }
+    .square{
+        height: 20vh;
+        font-size: 5rem;
+    }
+}
